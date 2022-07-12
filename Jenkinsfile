@@ -6,11 +6,11 @@ pipeline {
     JFROG_PASSWORD  = credentials('jfrog-password')
   }
     stages {
-        stage('Checkout Git Repository') {
+        /*stage('Checkout Git Repository') {
             steps {
                 git branch: 'artifactory', url: 'https://github.com/darinpope/java-web-app'
             }
-        }
+        }*/
         stage('Build Maven Job'){
            steps {
               sh './mvnw install'
